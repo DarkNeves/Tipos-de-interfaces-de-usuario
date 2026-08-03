@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+  <title id="title">Interface baseada em formulário</title>
+  <desc id="desc">Formulário com campos de texto, caixas de seleção, rótulos e botão de envio.</desc>
+  <rect width="720" height="450" rx="28" fill="#EEF5FF"/>
+  <rect x="150" y="40" width="420" height="370" rx="22" fill="#fff" stroke="#172033" stroke-width="8"/>
+  <path d="M205 95h145" stroke="#174EA6" stroke-width="14" stroke-linecap="round"/>
+  <path d="M205 147h90m-90 101h120" stroke="#465168" stroke-width="9" stroke-linecap="round"/>
+  <rect x="205" y="168" width="310" height="52" rx="8" fill="#fff" stroke="#D8DEE9" stroke-width="7"/>
+  <rect x="205" y="270" width="28" height="28" rx="5" fill="#D7F1EF" stroke="#0B7A75" stroke-width="6"/>
+  <path d="m213 283 7 7 14-18" fill="none" stroke="#0B7A75" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M252 284h146" stroke="#465168" stroke-width="9" stroke-linecap="round"/>
+  <rect x="205" y="326" width="172" height="48" rx="10" fill="#174EA6"/>
+  <path d="M246 350h90" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+</svg>

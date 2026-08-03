@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+  <title id="title">Interface de linguagem natural</title>
+  <desc id="desc">Pessoa e computador trocando balões de conversa com símbolos de diálogo.</desc>
+  <rect width="720" height="450" rx="28" fill="#EEF5FF"/>
+  <circle cx="177" cy="188" r="63" fill="#FFCA85" stroke="#172033" stroke-width="9"/>
+  <path d="M75 397c8-101 48-151 102-151s94 50 102 151" fill="#174EA6" stroke="#172033" stroke-width="9"/>
+  <rect x="431" y="173" width="210" height="157" rx="15" fill="#fff" stroke="#172033" stroke-width="9"/>
+  <path d="M467 368h138M536 330v38" stroke="#172033" stroke-width="12" stroke-linecap="round"/>
+  <path d="M247 74h210a24 24 0 0 1 24 24v60a24 24 0 0 1-24 24H342l-43 36 10-36h-62a24 24 0 0 1-24-24V98a24 24 0 0 1 24-24Z" fill="#0B7A75"/>
+  <circle cx="293" cy="128" r="10" fill="#fff"/>
+  <circle cx="352" cy="128" r="10" fill="#fff"/>
+  <circle cx="411" cy="128" r="10" fill="#fff"/>
+  <path d="M457 221h123M457 260h90" stroke="#174EA6" stroke-width="11" stroke-linecap="round"/>
+</svg>

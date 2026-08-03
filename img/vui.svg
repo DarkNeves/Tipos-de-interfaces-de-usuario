@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+  <title id="title">Interface de voz do usuário</title>
+  <desc id="desc">Microfone central cercado por ondas sonoras azuis e verdes.</desc>
+  <rect width="720" height="450" rx="28" fill="#EEF5FF"/>
+  <rect x="304" y="77" width="112" height="205" rx="56" fill="#174EA6"/>
+  <path d="M265 225v13c0 52 43 95 95 95s95-43 95-95v-13M360 333v60m-65 0h130" fill="none" stroke="#172033" stroke-width="14" stroke-linecap="round"/>
+  <path d="M224 163c-18 38-18 79 0 117m-58-151c-34 60-34 125 0 185M496 163c18 38 18 79 0 117m58-151c34 60 34 125 0 185" fill="none" stroke="#0B7A75" stroke-width="14" stroke-linecap="round"/>
+  <path d="M330 128h60M330 171h60M330 214h60" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+</svg>

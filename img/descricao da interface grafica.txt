@@ -1,0 +1,1 @@
+Conjunto de elementos de interface gráfica, incluindo botões, formulários, gráficos e painéis.

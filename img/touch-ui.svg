@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+  <title id="title">Interface de toque</title>
+  <desc id="desc">Mão estilizada tocando um botão circular em uma tela de dispositivo móvel.</desc>
+  <rect width="720" height="450" rx="28" fill="#EEF5FF"/>
+  <rect x="230" y="34" width="260" height="382" rx="32" fill="#fff" stroke="#172033" stroke-width="9"/>
+  <rect x="257" y="74" width="206" height="267" rx="12" fill="#D8E5F7"/>
+  <circle cx="360" cy="204" r="62" fill="#D7F1EF" stroke="#0B7A75" stroke-width="8"/>
+  <circle cx="360" cy="204" r="29" fill="#0B7A75"/>
+  <circle cx="360" cy="376" r="13" fill="#174EA6"/>
+  <path d="M540 387c-11-80-35-138-70-174-19-20-45 2-33 23l21 36-69-83c-17-20-48 2-31 24l53 70-24-26c-18-19-46 7-28 27l72 81c18 20 37 27 62 23l47-1Z" fill="#FFCA85" stroke="#172033" stroke-width="9" stroke-linejoin="round"/>
+</svg>

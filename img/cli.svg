@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 450" role="img" aria-labelledby="title desc">
+  <title id="title">Interface de linha de comando</title>
+  <desc id="desc">Janela escura de terminal com linhas de comandos, cursor e resultado textual.</desc>
+  <rect width="720" height="450" rx="28" fill="#E8EEF7"/>
+  <rect x="75" y="62" width="570" height="326" rx="18" fill="#172033"/>
+  <path d="M75 118h570" stroke="#465168" stroke-width="5"/>
+  <circle cx="112" cy="91" r="9" fill="#FFB703"/>
+  <circle cx="142" cy="91" r="9" fill="#0B7A75"/>
+  <path d="m115 167 28 23-28 23M165 213h74" fill="none" stroke="#8EE3DC" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M115 260h330M115 303h232" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+  <rect x="115" y="338" width="16" height="25" fill="#FFB703"/>
+</svg>

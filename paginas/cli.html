@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Definição, funcionamento, exemplos, vantagens, limitações e acessibilidade da Interface de Linha de Comando (CLI).">
+  <title>CLI — Interface de Linha de Comando</title>
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../libs/lenis.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../libs/lenis.min.js" defer></script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body id="topo">
+  <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Página inicial — Tipos de Interfaces de Usuário">
+        <img src="../img/if logo.png" width="482" height="414" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
+        <span class="brand-text"><strong>Tipos de Interfaces de Usuário</strong><span>Trabalho acadêmico</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul><li><a href="../index.html">Início</a></li><li><a href="../index.html#interfaces" aria-current="page">Interfaces</a></li><li><a href="./referencias.html">Referências</a></li><li><a href="../index.html#integrantes">Integrantes</a></li></ul>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo-principal" tabindex="-1">
+    <header class="topic-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Trilha de navegação"><ol><li><a href="../index.html">Início</a></li><li><a href="../index.html#interfaces">Interfaces</a></li><li aria-current="page">CLI</li></ol></nav>
+        <div class="topic-hero">
+          <div>
+            <p class="eyebrow">CLI</p>
+            <h1>Interface de Linha de Comando</h1>
+            <p class="lead definition">Permite que o usuário controle um sistema digitando comandos textuais em um terminal.</p>
+          </div>
+          <figure class="topic-figure figura-conteudo">
+            <img src="../img/cli.svg" width="720" height="450" alt="Ilustração de uma janela de terminal escura, com símbolo de comando, linhas de texto e um cursor amarelo, representando uma interface de linha de comando.">
+            <figcaption>
+              <span><strong>Descrição:</strong> Ilustração de uma janela de terminal com símbolo de comando, linhas de texto e cursor, representando uma interface de linha de comando.</span>
+              <span><strong>Fonte:</strong> Ilustração autoral desenvolvida para este projeto, 2026.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </header>
+    <article class="section">
+      <div class="container layout-pagina">
+        <div class="conteudo-pagina">
+          <section id="funcionamento" aria-labelledby="funcionamento-titulo">
+            <h2 id="funcionamento-titulo">Como funciona</h2>
+            <p>O usuário informa um comando seguindo uma sintaxe específica. O sistema interpreta a instrução, executa a operação e apresenta o resultado em texto.</p>
+            <p>Comandos podem ser combinados em scripts para automatizar sequências de tarefas e repetir processos com precisão.</p>
+          </section>
+          <section id="caracteristicas" aria-labelledby="caracteristicas-titulo">
+            <h2 id="caracteristicas-titulo">Principais características</h2>
+            <ul class="feature-list">
+              <li>Entrada e saída predominantemente textuais.</li>
+              <li>Sintaxe e parâmetros bem definidos.</li>
+              <li>Composição e automação de comandos.</li>
+              <li>Operação completa por teclado.</li>
+            </ul>
+          </section>
+          <section id="exemplos" aria-labelledby="exemplos-titulo">
+            <h2 id="exemplos-titulo">Exemplos de utilização</h2>
+            <p>Prompt de Comando, PowerShell, Bash, Terminal Linux, Git e ferramentas de administração de servidores utilizam interfaces de linha de comando.</p>
+            <p>O PowerShell é um exemplo de CLI. O usuário digita comandos e o sistema apresenta os resultados em formato textual.</p>
+            <figure class="powershell-demo" aria-label="Simulação de uma janela do Windows PowerShell mostrando os comandos Git utilizados para iniciar um repositório, adicionar arquivos, criar um commit e enviar o projeto ao GitHub.">
+              <div class="terminal-bar" aria-hidden="true">
+                <span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                <strong>Windows PowerShell</strong>
+              </div>
+              <div class="terminal-screen" data-lenis-prevent data-lenis-prevent-wheel>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git init</span></p>
+                <p class="output">Initialized empty Git repository in C:/Users/Aluno/Projeto/.git/</p>
+                <p class="terminal-gap" aria-hidden="true"></p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git add .</span></p>
+                <p class="terminal-gap" aria-hidden="true"></p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git commit -m &quot;Adiciona site sobre interfaces&quot;</span></p>
+                <p class="output">[main (root-commit) 4f8a2c1] Adiciona site sobre interfaces</p>
+                <p class="terminal-gap" aria-hidden="true"></p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git branch -M main</span></p>
+                <p class="terminal-gap" aria-hidden="true"></p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git remote add origin https://github.com/usuario/tipos-de-interfaces.git</span></p>
+                <p class="terminal-gap" aria-hidden="true"></p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git push -u origin main</span></p>
+                <p class="output">Branch 'main' set up to track remote branch 'main' from 'origin'.</p>
+                <p>PS C:\Users\Aluno\Projeto&gt;<span class="terminal-cursor"></span></p>
+              </div>
+              <figcaption>Simulação de comandos Git executados no Windows PowerShell para preparar e enviar um projeto ao GitHub.</figcaption>
+            </figure>
+          </section>
+          <section id="analise" aria-labelledby="analise-titulo">
+            <h2 id="analise-titulo">Vantagens e limitações</h2>
+            <div class="grade-comparacao">
+              <section class="card-comparacao advantages" aria-labelledby="vantagens-titulo">
+                <div class="icon-label"><span class="icon" aria-hidden="true">+</span><h3 id="vantagens-titulo">Vantagens</h3></div>
+                <ul><li>Execução rápida.</li><li>Automação de tarefas.</li><li>Baixo consumo de recursos.</li><li>Controle detalhado.</li><li>Repetição de operações.</li></ul>
+              </section>
+              <section class="card-comparacao limitations" aria-labelledby="limitacoes-titulo">
+                <div class="icon-label"><span class="icon" aria-hidden="true">!</span><h3 id="limitacoes-titulo">Limitações</h3></div>
+                <ul><li>Exige conhecimento técnico.</li><li>Requer memorização.</li><li>Erros de digitação impedem ações.</li><li>Mensagens podem confundir iniciantes.</li></ul>
+              </section>
+            </div>
+          </section>
+          <section id="acessibilidade" class="content-card accessibility" aria-labelledby="acessibilidade-titulo">
+            <div class="icon-label"><span class="icon" aria-hidden="true">A</span><h2 id="acessibilidade-titulo">Cuidados de acessibilidade</h2></div>
+            <p>O terminal precisa oferecer contraste ajustável, textos claros e navegação integral por teclado. A saída deve manter uma ordem compreensível para tecnologias assistivas.</p>
+            <p>Mensagens de erro devem identificar o problema e sugerir uma correção, evitando depender apenas de códigos ou mudanças de cor.</p>
+          </section>
+          <section id="fonte" class="fonte-cientifica" aria-labelledby="fonte-titulo">
+            <h2 id="fonte-titulo">Fonte científica utilizada</h2>
+            <div class="source-box card-fonte">
+              <p>SCHRÖDER, Michael; CITO, Jürgen. <strong>An empirical investigation of command-line customization</strong>. Empirical Software Engineering, v. 27, 2022.</p>
+              <p><a href="https://doi.org/10.1007/s10664-021-10036-y" target="_blank" rel="noopener noreferrer">Acessar artigo sobre interfaces de linha de comando<span class="texto-leitor"> — abre em uma nova aba</span></a></p>
+            </div>
+          </section>
+          <nav class="page-navigation" aria-label="Navegação entre interfaces">
+            <a class="button secondary" href="./gui.html">← Interface anterior: GUI</a>
+            <a class="button" href="./menu.html">Próxima interface: Menu →</a>
+          </nav>
+        </div>
+        <aside class="menu-pagina" aria-labelledby="nesta-pagina">
+          <h2 id="nesta-pagina">Nesta página</h2>
+          <ul><li><a href="#funcionamento">Como funciona</a></li><li><a href="#caracteristicas">Características</a></li><li><a href="#exemplos">Exemplos</a></li><li><a href="#analise">Vantagens e limitações</a></li><li><a href="#acessibilidade">Acessibilidade</a></li><li><a href="#fonte">Fonte científica</a></li><li><a class="menu-link-secondary" href="../index.html">Voltar ao início</a></li><li><a class="menu-link-secondary" href="./referencias.html">Ver referências</a></li></ul>
+        </aside>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><p><strong>Instituto Federal de Roraima — IFRR</strong></p><p>Multimídia e Interação Humano-Computador · MOD 4 — Noturno · 2026</p></div>
+      <nav class="footer-links" aria-label="Navegação do rodapé"><a href="./referencias.html">Referências</a><a href="../index.html">Voltar ao início</a></nav>
+    </div>
+  </footer>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Voltar ao topo da página">Voltar ao topo ↑</button>
+</body>
+</html>
+
+
+
+
+

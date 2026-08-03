@@ -1,1 +1,224 @@
-git clone https://github.com/DarkNeves/Tipos-de-interfaces-de-usuario.gitgit add .
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site acadêmico do IFRR sobre sete tipos de interfaces de usuário, suas aplicações, vantagens, limitações e acessibilidade.">
+  <title>Tipos de Interfaces de Usuário — IFRR</title>
+  <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./libs/lenis.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./libs/lenis.min.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</head>
+<body id="topo">
+  <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="Página inicial — Tipos de Interfaces de Usuário">
+        <img src="./img/if logo.png" width="482" height="414" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
+        <span class="brand-text">
+          <strong>Tipos de Interfaces de Usuário</strong>
+          <span>Trabalho acadêmico</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="./index.html" aria-current="page">Início</a></li>
+          <li><a href="#interfaces">Interfaces</a></li>
+          <li><a href="./paginas/referencias.html">Referências</a></li>
+          <li><a href="#integrantes">Integrantes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" tabindex="-1">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="container hero-grid">
+        <div>
+          <p class="institution-name">Instituto Federal de Educação, Ciência e Tecnologia de Roraima — IFRR</p>
+          <p class="eyebrow">Trabalho acadêmico</p>
+          <h1 id="titulo-principal">Tipos de Interfaces de Usuário</h1>
+          <p class="lead">Uma análise das diferentes formas de interação entre pessoas e sistemas computacionais.</p>
+
+          <dl class="academic-data">
+            <div class="wide">
+              <dt>Disciplina</dt>
+              <dd>MULTIMÍDIA E INTERAÇÃO HUMANO-COMPUTADOR</dd>
+            </div>
+            <div>
+              <dt>Professor</dt>
+              <dd>RICARDO JACAUNA</dd>
+            </div>
+            <div>
+              <dt>Turma</dt>
+              <dd>MOD 4 — NOTURNO</dd>
+            </div>
+          </dl>
+
+          <section class="integrantes-resumo" id="integrantes" aria-labelledby="integrantes-titulo">
+            <h2 id="integrantes-titulo">Integrantes</h2>
+            <p>Israel Moreno e Andreia de Souza</p>
+          </section>
+        </div>
+
+        <figure class="hero-figure figura-conteudo">
+          <img src="./img/foto-integrantes.svg" width="720" height="480" alt="Ilustração dos dois integrantes do trabalho">
+          <figcaption>
+            <span><strong>Descrição:</strong> Duas figuras humanas estilizadas lado a lado, representando os integrantes do trabalho.</span>
+            <span><strong>Fonte:</strong> Ilustração autoral desenvolvida para este projeto, 2026.</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section secao-introducao" aria-labelledby="introducao-titulo">
+      <div class="container">
+        <div class="conteudo-introducao">
+          <p class="eyebrow">Introdução</p>
+          <h2 id="introducao-titulo">O ponto de encontro entre pessoas e tecnologia</h2>
+          <p>Uma interface de usuário é o meio pelo qual uma pessoa interage com um sistema, dispositivo ou aplicação. Ela apresenta informações e permite que ações sejam realizadas.</p>
+          <p>As interfaces podem usar elementos visuais, comandos, menus, toques, voz, formulários ou linguagem cotidiana. Cada abordagem atende a contextos e necessidades diferentes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="interfaces" aria-labelledby="interfaces-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Sete abordagens</p>
+          <h2 id="interfaces-titulo">Conheça os tipos de interface</h2>
+          <p>Selecione um tema para consultar definição, funcionamento, exemplos, benefícios, limitações e cuidados de acessibilidade.</p>
+        </div>
+
+        <div class="cards grade-interfaces">
+          <a class="interface-card" href="./paginas/gui.html">
+            <figure class="card-visual">
+              <img src="./img/gui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">GUI</span>
+              <h3>Interface Gráfica do Usuário</h3>
+              <p>Organiza a interação por janelas, ícones, botões e menus visuais.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="interface-card" href="./paginas/cli.html">
+            <figure class="card-visual">
+              <img src="./img/cli.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">CLI</span>
+              <h3>Interface de Linha de Comando</h3>
+              <p>Controla o sistema por instruções textuais digitadas em um terminal.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="interface-card" href="./paginas/menu.html">
+            <figure class="card-visual">
+              <img src="./img/menu.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Menu</span>
+              <h3>Interface Orientada por Menu</h3>
+              <p>Apresenta funções em listas e categorias para orientar cada escolha.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="interface-card" href="./paginas/touch-ui.html">
+            <figure class="card-visual">
+              <img src="./img/touch-ui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Touch UI</span>
+              <h3>Interface de Toque</h3>
+              <p>Permite interação direta com a tela por meio de toques e gestos.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="interface-card" href="./paginas/vui.html">
+            <figure class="card-visual">
+              <img src="./img/vui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">VUI</span>
+              <h3>Interface de Voz do Usuário</h3>
+              <p>Recebe solicitações faladas e responde por áudio, texto ou ações.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="interface-card" href="./paginas/formulario.html">
+            <figure class="card-visual">
+              <img src="./img/formulario.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Formulário</span>
+              <h3>Interface Baseada em Formulário</h3>
+              <p>Coleta dados estruturados por campos, seletores e controles de envio.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="interface-card" href="./paginas/linguagem-natural.html">
+            <figure class="card-visual">
+              <img src="./img/linguagem-natural.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+            </figure>
+            <div class="card-body">
+              <span class="tag">Linguagem natural</span>
+              <h3>Interface de Linguagem Natural</h3>
+              <p>Interpreta frases próximas da comunicação humana, escritas ou faladas.</p>
+              <span class="card-cta">Conhecer interface <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="criterios-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Critérios do projeto</p>
+          <h2 id="criterios-titulo">Qualidade centrada nas pessoas</h2>
+        </div>
+        <div class="criteria-grid">
+          <article class="content-card card-criterio">
+            <div class="icon-label"><span class="icon" aria-hidden="true">A</span><h3>Acessibilidade</h3></div>
+            <p>Estrutura semântica, contraste, foco visível, textos alternativos e operação por teclado seguem princípios da WCAG 2.1.</p>
+          </article>
+          <article class="content-card card-criterio">
+            <div class="icon-label"><span class="icon" aria-hidden="true">R</span><h3>Responsividade</h3></div>
+            <p>O conteúdo se adapta a celulares, tablets e computadores sem esconder informações essenciais ou gerar rolagem horizontal.</p>
+          </article>
+          <article class="content-card card-criterio">
+            <div class="icon-label"><span class="icon" aria-hidden="true">Q</span><h3>Qualidade de software</h3></div>
+            <p>A organização, compatibilidade, desempenho e facilidade de manutenção refletem critérios da ISO/IEC 25010.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p><strong>Instituto Federal de Roraima — IFRR</strong></p>
+        <p>Multimídia e Interação Humano-Computador · MOD 4 — Noturno · 2026</p>
+      </div>
+      <nav class="footer-links" aria-label="Navegação do rodapé">
+        <a href="./paginas/referencias.html">Referências</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" data-back-to-top aria-label="Voltar ao topo da página">Voltar ao topo ↑</button>
+</body>
+</html>
+
