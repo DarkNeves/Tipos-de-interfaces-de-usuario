@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
-  <title id="title">Símbolo acadêmico provisório</title>
-  <desc id="desc">Escudo azul com um livro aberto e um pequeno círculo verde ao centro.</desc>
-  <rect width="160" height="160" rx="32" fill="#174EA6"/>
-  <path d="M33 48c20-3 35 2 47 13 12-11 27-16 47-13v64c-20-3-35 2-47 13-12-11-27-16-47-13V48Z" fill="#fff"/>
-  <path d="M80 61v64M42 59c16-1 28 3 38 12m38-12c-16-1-28 3-38 12" fill="none" stroke="#D8DEE9" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="80" cy="92" r="10" fill="#0B7A75"/>
-</svg>

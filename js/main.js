@@ -1,90 +1,126 @@
 (() => {
   "use strict";
 
+  const limiteMovel = window.matchMedia("(max-width: 760px)");
   const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const dispositivoTouch = window.matchMedia("(pointer: coarse)");
-  const backToTopButton = document.querySelector("[data-back-to-top]");
-  const skipLink = document.querySelector(".pular-conteudo");
-  let lenis = null;
-  let avisoLenisAusenteExibido = false;
+  const botaoMenu = document.querySelector(".botao-menu");
+  const menu = botaoMenu
+    ? document.getElementById(botaoMenu.getAttribute("aria-controls"))
+    : null;
+  const cabecalho = document.querySelector(".site-header");
+  const botaoTopo = document.querySelector("[data-back-to-top]");
+  const linkPular = document.querySelector(".pular-conteudo");
 
-  const destruirLenis = () => {
-    if (lenis) {
-      lenis.destroy();
-      lenis = null;
-    }
-
-    document.documentElement.classList.remove("lenis-ativo");
-  };
-
-  const configurarRolagem = () => {
-    destruirLenis();
-
-    if (reduzirMovimento.matches || dispositivoTouch.matches) {
+  const definirEspacoDoMenu = () => {
+    if (!menu || !limiteMovel.matches || menu.hidden) {
+      document.body.classList.remove("menu-movel-aberto");
+      document.body.style.removeProperty("--altura-menu-movel");
       return;
     }
 
-    if (typeof Lenis === "undefined") {
-      if (!avisoLenisAusenteExibido) {
-        console.warn("Lenis não carregado. Scroll nativo mantido.");
-        avisoLenisAusenteExibido = true;
+    document.body.style.setProperty("--altura-menu-movel", `${menu.offsetHeight}px`);
+    document.body.classList.add("menu-movel-aberto");
+  };
+
+  const fecharMenu = ({ devolverFoco = false } = {}) => {
+    if (!botaoMenu || !menu) {
+      return;
+    }
+
+    botaoMenu.setAttribute("aria-expanded", "false");
+    menu.classList.remove("is-open");
+    cabecalho?.classList.remove("menu-aberto");
+
+    if (limiteMovel.matches) {
+      menu.hidden = true;
+    }
+
+    definirEspacoDoMenu();
+
+    if (devolverFoco) {
+      botaoMenu.focus();
+    }
+  };
+
+  const abrirMenu = () => {
+    if (!botaoMenu || !menu || !limiteMovel.matches) {
+      return;
+    }
+
+    menu.hidden = false;
+    menu.classList.add("is-open");
+    cabecalho?.classList.add("menu-aberto");
+    botaoMenu.setAttribute("aria-expanded", "true");
+    definirEspacoDoMenu();
+  };
+
+  const sincronizarMenu = () => {
+    if (!botaoMenu || !menu) {
+      return;
+    }
+
+    if (limiteMovel.matches) {
+      fecharMenu();
+      return;
+    }
+
+    menu.hidden = false;
+    menu.classList.remove("is-open");
+    cabecalho?.classList.remove("menu-aberto");
+    botaoMenu.setAttribute("aria-expanded", "false");
+    definirEspacoDoMenu();
+  };
+
+  if (botaoMenu && menu) {
+    botaoMenu.addEventListener("click", () => {
+      const aberto = botaoMenu.getAttribute("aria-expanded") === "true";
+      aberto ? fecharMenu() : abrirMenu();
+    });
+
+    botaoMenu.addEventListener("keydown", (event) => {
+      if ((event.key === "Enter" || event.key === " ") && !event.repeat) {
+        event.preventDefault();
+        botaoMenu.click();
       }
-      return;
-    }
+    });
 
-    try {
-      lenis = new Lenis({
-        autoRaf: true,
-        smoothWheel: true,
-        syncTouch: false,
-        lerp: 0.12,
-        wheelMultiplier: 0.9,
-        orientation: "vertical",
-        gestureOrientation: "vertical",
-        anchors: {
-          duration: 0.8
-        },
-        overscroll: false,
-        stopInertiaOnNavigate: true
-      });
-      document.documentElement.classList.add("lenis-ativo");
-    } catch (error) {
-      destruirLenis();
-      console.warn("Não foi possível iniciar o Lenis. Scroll nativo mantido.", error);
-    }
-  };
+    menu.addEventListener("click", (event) => {
+      if (limiteMovel.matches && event.target.closest("a")) {
+        fecharMenu();
+      }
+    });
 
-  if (backToTopButton) {
-    const updateBackToTopVisibility = () => {
-      const shouldShow = window.scrollY > 500;
-      backToTopButton.hidden = !shouldShow;
-      backToTopButton.classList.toggle("is-visible", shouldShow);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && botaoMenu.getAttribute("aria-expanded") === "true") {
+        fecharMenu({ devolverFoco: true });
+      }
+    });
+
+    limiteMovel.addEventListener?.("change", sincronizarMenu);
+    window.addEventListener("resize", definirEspacoDoMenu, { passive: true });
+    sincronizarMenu();
+  }
+
+  if (botaoTopo) {
+    const atualizarBotaoTopo = () => {
+      const mostrar = window.scrollY > 500;
+      botaoTopo.hidden = !mostrar;
+      botaoTopo.classList.toggle("is-visible", mostrar);
     };
 
-    backToTopButton.addEventListener("click", () => {
-      if (lenis) {
-        lenis.scrollTo(0);
-        return;
-      }
-
+    botaoTopo.addEventListener("click", () => {
       window.scrollTo({
         top: 0,
         behavior: reduzirMovimento.matches ? "auto" : "smooth"
       });
     });
 
-    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
-    updateBackToTopVisibility();
+    window.addEventListener("scroll", atualizarBotaoTopo, { passive: true });
+    atualizarBotaoTopo();
   }
 
-  if (skipLink) {
-    skipLink.addEventListener("click", () => {
-      const target = document.querySelector(skipLink.hash);
-      target?.focus({ preventScroll: true });
-    });
-  }
-
-  configurarRolagem();
-  reduzirMovimento.addEventListener?.("change", configurarRolagem);
-  dispositivoTouch.addEventListener?.("change", configurarRolagem);
+  linkPular?.addEventListener("click", () => {
+    const destino = document.querySelector(linkPular.hash);
+    window.requestAnimationFrame(() => destino?.focus({ preventScroll: true }));
+  });
 })();

@@ -6,9 +6,7 @@
   <meta name="description" content="Site acadêmico do IFRR sobre sete tipos de interfaces de usuário, suas aplicações, vantagens, limitações e acessibilidade.">
   <title>Tipos de Interfaces de Usuário — IFRR</title>
   <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./libs/lenis.css">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./libs/lenis.min.js" defer></script>
   <script src="./js/main.js" defer></script>
 </head>
 <body id="topo">
@@ -17,18 +15,21 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="./index.html" aria-label="Página inicial — Tipos de Interfaces de Usuário">
-        <img src="./img/if logo.png" width="482" height="414" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
+        <img src="./img/logo-ifrr.png" width="849" height="175" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
         <span class="brand-text">
           <strong>Tipos de Interfaces de Usuário</strong>
           <span>Trabalho acadêmico</span>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Navegação principal">
+      <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="texto-menu">Menu</span>
+        <span class="icone-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
         <ul>
           <li><a href="./index.html" aria-current="page">Início</a></li>
           <li><a href="#interfaces">Interfaces</a></li>
           <li><a href="./paginas/referencias.html">Referências</a></li>
-          <li><a href="#integrantes">Integrantes</a></li>
         </ul>
       </nav>
     </div>
@@ -54,7 +55,7 @@
             </div>
             <div>
               <dt>Turma</dt>
-              <dd>MOD 4 — NOTURNO</dd>
+              <dd>MOD 4 - NOTURNO</dd>
             </div>
           </dl>
 
@@ -65,10 +66,10 @@
         </div>
 
         <figure class="hero-figure figura-conteudo">
-          <img src="./img/foto-integrantes.svg" width="720" height="480" alt="Ilustração dos dois integrantes do trabalho">
+          <img src="./img/fotos-integrantes.webp" width="750" height="1333" alt="Foto dos integrantes do trabalho, Israel Moreno e Andreia de Souza">
           <figcaption>
-            <span><strong>Descrição:</strong> Duas figuras humanas estilizadas lado a lado, representando os integrantes do trabalho.</span>
-            <span><strong>Fonte:</strong> Ilustração autoral desenvolvida para este projeto, 2026.</span>
+            <span><strong>Descrição:</strong> Israel Moreno e Andreia de Souza, integrantes do trabalho.</span>
+            <span><strong>Fonte:</strong> Arquivo fornecido pelos integrantes, 2026.</span>
           </figcaption>
         </figure>
       </div>
@@ -95,9 +96,9 @@
 
         <div class="cards grade-interfaces">
           <a class="interface-card" href="./paginas/gui.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/gui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">GUI</span>
               <h3>Interface Gráfica do Usuário</h3>
@@ -107,9 +108,9 @@
           </a>
 
           <a class="interface-card" href="./paginas/cli.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/cli.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">CLI</span>
               <h3>Interface de Linha de Comando</h3>
@@ -119,9 +120,9 @@
           </a>
 
           <a class="interface-card" href="./paginas/menu.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/menu.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">Menu</span>
               <h3>Interface Orientada por Menu</h3>
@@ -131,9 +132,9 @@
           </a>
 
           <a class="interface-card" href="./paginas/touch-ui.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/touch-ui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">Touch UI</span>
               <h3>Interface de Toque</h3>
@@ -143,9 +144,9 @@
           </a>
 
           <a class="interface-card" href="./paginas/vui.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/vui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">VUI</span>
               <h3>Interface de Voz do Usuário</h3>
@@ -155,9 +156,9 @@
           </a>
 
           <a class="interface-card" href="./paginas/formulario.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/formulario.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">Formulário</span>
               <h3>Interface Baseada em Formulário</h3>
@@ -167,9 +168,9 @@
           </a>
 
           <a class="interface-card" href="./paginas/linguagem-natural.html">
-            <figure class="card-visual">
+            <div class="card-visual">
               <img src="./img/linguagem-natural.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
-            </figure>
+            </div>
             <div class="card-body">
               <span class="tag">Linguagem natural</span>
               <h3>Interface de Linguagem Natural</h3>

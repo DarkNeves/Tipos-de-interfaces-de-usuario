@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Definição, funcionamento, exemplos, vantagens, limitações e acessibilidade da Interface Orientada por Menu.">
-  <title>Menu — Interface Orientada por Menu</title>
+  <meta name="description" content="Definição, funcionamento, exemplos, vantagens, limitações e acessibilidade da Interface de Voz do Usuário (VUI).">
+  <title>VUI — Interface de Voz do Usuário</title>
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/main.js" defer></script>
@@ -24,10 +24,10 @@
   <main id="conteudo-principal" tabindex="-1">
     <header class="topic-header">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Trilha de navegação"><ol><li><a href="../index.html">Início</a></li><li><a href="../index.html#interfaces">Interfaces</a></li><li aria-current="page">Menu</li></ol></nav>
+        <nav class="breadcrumb" aria-label="Trilha de navegação"><ol><li><a href="../index.html">Início</a></li><li><a href="../index.html#interfaces">Interfaces</a></li><li aria-current="page">VUI</li></ol></nav>
         <div class="topic-hero">
-          <div><p class="eyebrow">Menu</p><h1>Interface Orientada por Menu</h1><p class="lead definition">Apresenta opções organizadas para que o usuário escolha uma função sem precisar memorizar comandos.</p></div>
-          <figure class="topic-figure figura-conteudo"><img src="../img/menu.svg" width="720" height="450" alt="Painel contendo opções organizadas em uma lista e uma opção destacada, representando uma interface orientada por menu"><figcaption><span><strong>Descrição:</strong> Painel com opções organizadas em lista e uma delas destacada, representando uma interface orientada por menu.</span><span><strong>Fonte:</strong> Ilustração autoral desenvolvida para este projeto, 2026.</span></figcaption></figure>
+          <div><p class="eyebrow">VUI</p><h1>Interface de Voz do Usuário</h1><p class="lead definition">Permite que uma pessoa interaja com um sistema por meio da fala.</p></div>
+          <figure class="topic-figure figura-conteudo"><img src="../img/vui.svg" width="720" height="450" alt="Microfone central cercado por ondas sonoras azuis e verdes, representando uma interface de voz"><figcaption><span><strong>Descrição:</strong> Microfone cercado por ondas sonoras azuis e verdes, representando uma interface controlada por voz.</span><span><strong>Fonte:</strong> Ilustração autoral desenvolvida para este projeto, 2026.</span></figcaption></figure>
         </div>
       </div>
     </header>
@@ -36,37 +36,34 @@
         <div class="conteudo-pagina">
           <section id="funcionamento" aria-labelledby="funcionamento-titulo">
             <h2 id="funcionamento-titulo">Como funciona</h2>
-            <p>O usuário navega por listas, categorias e subcategorias até encontrar a ação desejada. Cada escolha conduz a uma função ou a um novo conjunto de opções.</p>
-            <p>A organização e os nomes das categorias determinam quão rápido uma pessoa consegue localizar o que procura.</p>
+            <p>O sistema capta o áudio, transforma a fala em dados e interpreta a intenção. Em seguida, executa uma ação ou apresenta uma resposta.</p>
+            <p>Uma conversa pode exigir confirmações para evitar ações indevidas quando a solicitação é ambígua ou envolve dados importantes.</p>
           </section>
           <section id="caracteristicas" aria-labelledby="caracteristicas-titulo">
             <h2 id="caracteristicas-titulo">Principais características</h2>
-            <ul class="feature-list"><li>Opções visíveis e agrupadas.</li><li>Navegação por seleção.</li><li>Hierarquia entre categorias.</li><li>Orientação gradual da tarefa.</li></ul>
+            <ul class="feature-list"><li>Entrada baseada em fala.</li><li>Reconhecimento de comandos e intenções.</li><li>Resposta por áudio, texto ou ação.</li><li>Interação sem uso das mãos.</li></ul>
           </section>
           <section id="exemplos" aria-labelledby="exemplos-titulo">
             <h2 id="exemplos-titulo">Exemplos de utilização</h2>
-            <div class="content-card"><p>Caixas eletrônicos, televisores, centrais telefônicas, menus de sites, totens de atendimento e sistemas de autoatendimento usam menus.</p></div>
+            <div class="content-card"><p>Alexa, Siri, Google Assistente, centrais telefônicas, assistentes automotivos e comandos em dispositivos inteligentes utilizam voz.</p></div>
           </section>
           <section id="analise" aria-labelledby="analise-titulo">
             <h2 id="analise-titulo">Vantagens e limitações</h2>
             <div class="grade-comparacao">
-              <section class="card-comparacao advantages" aria-labelledby="vantagens-titulo"><div class="icon-label"><span class="icon" aria-hidden="true">+</span><h3 id="vantagens-titulo">Vantagens</h3></div><ul><li>Opções visíveis.</li><li>Facilidade de aprendizado.</li><li>Redução de erros.</li><li>Navegação orientada.</li><li>Menor memorização.</li></ul></section>
-              <section class="card-comparacao limitations" aria-labelledby="limitacoes-titulo"><div class="icon-label"><span class="icon" aria-hidden="true">!</span><h3 id="limitacoes-titulo">Limitações</h3></div><ul><li>Muitos níveis dificultam a navegação.</li><li>Categorias imprecisas confundem.</li><li>Listas extensas atrasam a busca.</li><li>Menus ocultos reduzem a descoberta.</li></ul></section>
+              <section class="card-comparacao advantages" aria-labelledby="vantagens-titulo"><div class="icon-label"><span class="icon" aria-hidden="true">+</span><h3 id="vantagens-titulo">Vantagens</h3></div><ul><li>Uso sem as mãos.</li><li>Interação rápida.</li><li>Apoio a limitações motoras.</li><li>Uso durante outra atividade.</li></ul></section>
+              <section class="card-comparacao limitations" aria-labelledby="limitacoes-titulo"><div class="icon-label"><span class="icon" aria-hidden="true">!</span><h3 id="limitacoes-titulo">Limitações</h3></div><ul><li>Ruídos afetam o reconhecimento.</li><li>Sotaques podem ser mal interpretados.</li><li>Existem riscos de privacidade.</li><li>Áudio isolado exclui pessoas surdas.</li></ul></section>
             </div>
           </section>
           <section id="acessibilidade" class="content-card accessibility" aria-labelledby="acessibilidade-titulo">
             <div class="icon-label"><span class="icon" aria-hidden="true">A</span><h2 id="acessibilidade-titulo">Cuidados de acessibilidade</h2></div>
-            <p>Menus devem funcionar com Tab, Enter e Espaço; as setas são apropriadas em componentes que seguem padrões específicos. O foco precisa permanecer visível.</p>
-            <p>Rótulos compreensíveis, ordem previsível e indicação textual da opção atual facilitam a navegação por teclado e por leitor de tela.</p>
+            <p>Toda função disponível por voz deve possuir alternativa visual ou textual. Respostas importantes também precisam aparecer em texto.</p>
+            <p>O sistema deve permitir correções, confirmar ações críticas e explicar de forma simples quando não compreender a solicitação.</p>
           </section>
           <section id="fonte" class="fonte-cientifica" aria-labelledby="fonte-titulo">
             <h2 id="fonte-titulo">Fonte científica utilizada</h2>
-            <div class="source-box card-fonte">
-              <p>MAGNUSSEN, Knut Ole Kvilhaug; IVERSEN, Kasper; MARENTAKIS, Georgios. <strong>Investigating the Impact of Website Menu Presentation Style on User Performance</strong>. ACHI 2024, 2024.</p>
-              <p><a href="https://personales.upv.es/thinkmind/ACHI/ACHI_2024/achi_2024_3_140_20065.html" target="_blank" rel="noopener noreferrer">Acessar o artigo (abre em nova aba)</a> · <a href="https://personales.upv.es/thinkmind/dl/conferences/achi/achi_2024/achi_2024_3_140_20065.pdf" target="_blank" rel="noopener noreferrer">Acessar o PDF (abre em nova aba)</a></p>
-            </div>
+            <div class="source-box card-fonte"><p>DESHMUKH, Akshay Madhav; CHALMETA, Ricardo. <strong>User Experience and Usability of Voice User Interfaces: A Systematic Literature Review</strong>. Information, v. 15, n. 9, 579, 2024.</p><p><a href="https://doi.org/10.3390/info15090579" target="_blank" rel="noopener noreferrer">Acessar o artigo pelo DOI (abre em nova aba)</a></p></div>
           </section>
-          <nav class="page-navigation" aria-label="Navegação entre páginas"><a class="button secondary" href="./cli.html">← Página anterior: CLI</a><a class="button" href="./touch-ui.html">Próxima página: Touch UI →</a></nav>
+          <nav class="page-navigation" aria-label="Navegação entre páginas"><a class="button secondary" href="./touch-ui.html">← Página anterior: Touch UI</a><a class="button" href="./formulario.html">Próxima página: Formulário →</a></nav>
         </div>
         <aside class="menu-pagina" aria-labelledby="nesta-pagina"><h2 id="nesta-pagina">Nesta página</h2><ul><li><a href="#funcionamento">Como funciona</a></li><li><a href="#caracteristicas">Características</a></li><li><a href="#exemplos">Exemplos</a></li><li><a href="#analise">Vantagens e limitações</a></li><li><a href="#acessibilidade">Acessibilidade</a></li><li><a href="#fonte">Fonte científica</a></li><li><a class="menu-link-secondary" href="../index.html">Voltar ao início</a></li><li><a class="menu-link-secondary" href="./referencias.html">Ver referências</a></li></ul></aside>
       </div>

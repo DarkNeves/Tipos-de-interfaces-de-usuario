@@ -6,9 +6,7 @@
   <meta name="description" content="Definição, funcionamento, exemplos, vantagens, limitações e acessibilidade da Interface de Linha de Comando (CLI).">
   <title>CLI — Interface de Linha de Comando</title>
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../libs/lenis.css">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../libs/lenis.min.js" defer></script>
   <script src="../js/main.js" defer></script>
 </head>
 <body id="topo">
@@ -16,11 +14,14 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html" aria-label="Página inicial — Tipos de Interfaces de Usuário">
-        <img src="../img/if logo.png" width="482" height="414" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
+        <img src="../img/logo-ifrr.png" width="849" height="175" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
         <span class="brand-text"><strong>Tipos de Interfaces de Usuário</strong><span>Trabalho acadêmico</span></span>
       </a>
-      <nav class="site-nav" aria-label="Navegação principal">
-        <ul><li><a href="../index.html">Início</a></li><li><a href="../index.html#interfaces" aria-current="page">Interfaces</a></li><li><a href="./referencias.html">Referências</a></li><li><a href="../index.html#integrantes">Integrantes</a></li></ul>
+      <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="texto-menu">Menu</span><span class="icone-menu" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <ul><li><a href="../index.html">Início</a></li><li><a href="../index.html#interfaces" aria-current="page">Interfaces</a></li><li><a href="./referencias.html">Referências</a></li></ul>
       </nav>
     </div>
   </header>
@@ -35,7 +36,7 @@
             <p class="lead definition">Permite que o usuário controle um sistema digitando comandos textuais em um terminal.</p>
           </div>
           <figure class="topic-figure figura-conteudo">
-            <img src="../img/cli.svg" width="720" height="450" alt="Ilustração de uma janela de terminal escura, com símbolo de comando, linhas de texto e um cursor amarelo, representando uma interface de linha de comando.">
+            <img src="../img/cli.svg" width="720" height="450" alt="Janela de terminal escura com símbolo de comando, linhas de texto e cursor amarelo, representando uma interface de linha de comando.">
             <figcaption>
               <span><strong>Descrição:</strong> Ilustração de uma janela de terminal com símbolo de comando, linhas de texto e cursor, representando uma interface de linha de comando.</span>
               <span><strong>Fonte:</strong> Ilustração autoral desenvolvida para este projeto, 2026.</span>
@@ -65,29 +66,27 @@
             <h2 id="exemplos-titulo">Exemplos de utilização</h2>
             <p>Prompt de Comando, PowerShell, Bash, Terminal Linux, Git e ferramentas de administração de servidores utilizam interfaces de linha de comando.</p>
             <p>O PowerShell é um exemplo de CLI. O usuário digita comandos e o sistema apresenta os resultados em formato textual.</p>
-            <figure class="powershell-demo" aria-label="Simulação de uma janela do Windows PowerShell mostrando os comandos Git utilizados para iniciar um repositório, adicionar arquivos, criar um commit e enviar o projeto ao GitHub.">
-              <div class="terminal-bar" aria-hidden="true">
+            <figure class="powershell-demo" aria-label="Simulação do Windows PowerShell demonstrando, nesta ordem, os comandos git pull, git init, git add ponto, git commit com a mensagem Israel e git push.">
+              <div class="terminal-barra" aria-hidden="true">
                 <span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span>
-                <strong>Windows PowerShell</strong>
+                <strong class="terminal-titulo">Windows PowerShell</strong>
               </div>
-              <div class="terminal-screen" data-lenis-prevent data-lenis-prevent-wheel>
+              <div class="terminal-conteudo">
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git pull</span></p>
+                <p class="output">Already up to date.</p>
+                <p class="terminal-gap" aria-hidden="true"></p>
                 <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git init</span></p>
-                <p class="output">Initialized empty Git repository in C:/Users/Aluno/Projeto/.git/</p>
+                <p class="output">Initialized empty Git repository.</p>
                 <p class="terminal-gap" aria-hidden="true"></p>
                 <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git add .</span></p>
                 <p class="terminal-gap" aria-hidden="true"></p>
-                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git commit -m &quot;Adiciona site sobre interfaces&quot;</span></p>
-                <p class="output">[main (root-commit) 4f8a2c1] Adiciona site sobre interfaces</p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git commit -m &quot;Israel&quot;</span></p>
+                <p class="output">[main 4f8a2c1] Israel</p>
                 <p class="terminal-gap" aria-hidden="true"></p>
-                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git branch -M main</span></p>
-                <p class="terminal-gap" aria-hidden="true"></p>
-                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git remote add origin https://github.com/usuario/tipos-de-interfaces.git</span></p>
-                <p class="terminal-gap" aria-hidden="true"></p>
-                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git push -u origin main</span></p>
-                <p class="output">Branch 'main' set up to track remote branch 'main' from 'origin'.</p>
-                <p>PS C:\Users\Aluno\Projeto&gt;<span class="terminal-cursor"></span></p>
+                <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git push</span></p>
+                <p class="output">Everything up-to-date.</p>
               </div>
-              <figcaption>Simulação de comandos Git executados no Windows PowerShell para preparar e enviar um projeto ao GitHub.</figcaption>
+              <figcaption>Simulação de comandos Git executados no Windows PowerShell.</figcaption>
             </figure>
           </section>
           <section id="analise" aria-labelledby="analise-titulo">

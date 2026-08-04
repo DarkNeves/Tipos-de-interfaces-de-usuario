@@ -38,10 +38,11 @@ tipos-de-interfaces/
 ├── js/
 │   └── main.js
 └── img/
-    ├── if logo.png
+    ├── logo-ifrr.png
     ├── favicon.svg
-    ├── interface grafica.avif
-    ├── foto-integrantes.svg
+    ├── interface-grafica.avif
+    ├── interface-formulario.webp
+    ├── fotos-integrantes.webp
     ├── gui.svg
     ├── cli.svg
     ├── menu.svg
@@ -74,17 +75,17 @@ Não há campo de data da apresentação.
 
 ### Logo
 
-O site utiliza a marca oficial local em `img/if logo.png`, uma única vez no cabeçalho de cada página. O favicon em `img/favicon.svg` é uma ilustração própria relacionada a interfaces e não modifica a marca institucional.
+O site utiliza a marca oficial local em `img/logo-ifrr.png`, uma única vez no cabeçalho de cada página. O favicon em `img/favicon.svg` é uma ilustração própria relacionada a interfaces e não modifica a marca institucional.
 
 ### Imagem da dupla
 
-Substitua `img/foto-integrantes.svg` pela foto da dupla e atualize o caminho da imagem em `index.html`. Por exemplo, ao usar um arquivo JPEG:
+O arquivo `img/fotos-integrantes.webp` contém a foto fornecida por Israel Moreno e Andreia de Souza. Ao substituir a foto, preserve sua proporção, informe as dimensões reais e atualize o caminho em `index.html`.
 
 ```html
-<img src="./img/foto-integrantes.jpg"
-     width="1200"
-     height="800"
-     alt="Descrição objetiva dos dois integrantes presentes na foto">
+<img src="./img/fotos-integrantes.webp"
+     width="750"
+     height="1333"
+     alt="Foto dos integrantes do trabalho, Israel Moreno e Andreia de Souza">
 ```
 
 Depois, atualize o crédito no `figcaption`.
@@ -93,7 +94,7 @@ Depois, atualize o crédito no `figcaption`.
 
 O CSS usa um único sistema de cores, tipografia, espaçamentos e componentes para todas as páginas. O cabeçalho é fixo e compacto; as grades de interfaces usam três, duas ou uma coluna conforme a largura disponível; cards crescem apenas de acordo com seu conteúdo; e páginas internas adotam conteúdo flexível com menu “Nesta página” de largura controlada.
 
-Os principais limites responsivos estão em 950px, 700px, 650px e 420px. Em telas estreitas e no zoom de 200%, o menu lateral passa para o fluxo do documento e as comparações são exibidas em uma coluna.
+Os principais limites responsivos estão em 950px, 760px, 650px e 420px. Em telas estreitas e no zoom de 200%, o menu principal se torna recolhível, o menu lateral passa para o fluxo do documento e as comparações são exibidas em uma coluna.
 
 ## Como criar o repositório
 
@@ -185,7 +186,7 @@ Faça os testes em mais de um navegador e, quando possível, use uma ferramenta 
 
 1. Use `Tab` e `Shift + Tab` para percorrer todos os links e botões.
 2. Confirme que o link **Pular para o conteúdo principal** aparece ao receber foco.
-3. Verifique se o foco amarelo é sempre visível.
+3. Verifique se o foco em âmbar-escuro, acompanhado por um halo branco, é sempre visível.
 4. Aumente o zoom do navegador para 200% e confira se nada fica cortado.
 5. Teste larguras de celular, tablet e computador nas ferramentas de desenvolvedor.
 6. Desative o JavaScript e confirme que todo o conteúdo continua disponível.
@@ -199,8 +200,8 @@ Faça os testes em mais de um navegador e, quando possível, use uma ferramenta 
 - [x] Todos os dados acadêmicos foram preenchidos.
 - [x] A marca oficial foi aplicada sem repetição na capa.
 - [x] O favicon local foi adicionado a todas as páginas.
-- [x] A capa possui uma ilustração compacta da dupla.
-- [x] O texto alternativo e o crédito da ilustração foram conferidos.
+- [x] A capa possui a foto fornecida pelos dois integrantes.
+- [x] O texto alternativo, a descrição e o crédito da foto foram conferidos.
 - [ ] Cada integrante trabalhou em uma branch própria.
 - [ ] Cada integrante enviou commits pelo próprio perfil.
 - [ ] Cada integrante abriu ao menos um pull request.
