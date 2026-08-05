@@ -9,11 +9,21 @@
     : null;
   const cabecalho = document.querySelector(".site-header");
   const botaoTopo = document.querySelector("[data-back-to-top]");
-  const linkPular = document.querySelector(".pular-conteudo");
+  const linksInternos = document.querySelectorAll('a[href^="#"]');
+  const controleScrollSuave = document.querySelector(".controle-scroll-suave");
+  const chaveScrollSuave = "scroll-suave-desativado";
+  let scrollSuaveDesativado = false;
+
+  try {
+    scrollSuaveDesativado = localStorage.getItem(chaveScrollSuave) === "true";
+  } catch {
+    scrollSuaveDesativado = false;
+  }
 
   const iniciarScrollSuave = () => {
     if (
       reduzirMovimento.matches ||
+      scrollSuaveDesativado ||
       typeof window.Lenis !== "function" ||
       window.siteLenis
     ) {
@@ -30,10 +40,31 @@
     });
   };
 
+  const encerrarScrollSuave = () => {
+    window.siteLenis?.destroy();
+    delete window.siteLenis;
+  };
+
+  const atualizarControleScrollSuave = () => {
+    if (!controleScrollSuave) {
+      return;
+    }
+
+    controleScrollSuave.setAttribute(
+      "aria-pressed",
+      String(scrollSuaveDesativado)
+    );
+    controleScrollSuave.setAttribute(
+      "aria-label",
+      scrollSuaveDesativado
+        ? "Ativar rolagem suave"
+        : "Desativar rolagem suave"
+    );
+  };
+
   const sincronizarPreferenciaDeMovimento = () => {
     if (reduzirMovimento.matches) {
-      window.siteLenis?.destroy();
-      delete window.siteLenis;
+      encerrarScrollSuave();
       return;
     }
 
@@ -41,7 +72,26 @@
   };
 
   iniciarScrollSuave();
+  atualizarControleScrollSuave();
   reduzirMovimento.addEventListener?.("change", sincronizarPreferenciaDeMovimento);
+
+  controleScrollSuave?.addEventListener("click", () => {
+    scrollSuaveDesativado = !scrollSuaveDesativado;
+
+    try {
+      localStorage.setItem(chaveScrollSuave, String(scrollSuaveDesativado));
+    } catch {
+      // A preferência vale apenas para a página atual se o armazenamento falhar.
+    }
+
+    if (scrollSuaveDesativado) {
+      encerrarScrollSuave();
+    } else {
+      iniciarScrollSuave();
+    }
+
+    atualizarControleScrollSuave();
+  });
 
   const definirEspacoDoMenu = () => {
     if (!menu || !limiteMovel.matches || menu.hidden) {
@@ -149,8 +199,26 @@
     atualizarBotaoTopo();
   }
 
-  linkPular?.addEventListener("click", () => {
-    const destino = document.querySelector(linkPular.hash);
-    window.requestAnimationFrame(() => destino?.focus({ preventScroll: true }));
+  linksInternos.forEach((link) => {
+    link.addEventListener("click", () => {
+      const idDestino = decodeURIComponent(link.hash.slice(1));
+      const destino = document.getElementById(idDestino);
+
+      if (!destino) {
+        return;
+      }
+
+      const alvoDoFoco = destino.matches("main, h1, h2, h3")
+        ? destino
+        : destino.querySelector("h1, h2, h3") || destino;
+
+      if (!alvoDoFoco.hasAttribute("tabindex")) {
+        alvoDoFoco.setAttribute("tabindex", "-1");
+      }
+
+      window.requestAnimationFrame(() => {
+        alvoDoFoco.focus({ preventScroll: true });
+      });
+    });
   });
 })();
