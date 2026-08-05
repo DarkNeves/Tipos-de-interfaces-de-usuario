@@ -6,7 +6,9 @@
   <meta name="description" content="Site acadêmico do IFRR sobre sete tipos de interfaces de usuário, suas aplicações, vantagens, limitações e acessibilidade.">
   <title>Tipos de Interfaces de Usuário — IFRR</title>
   <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./libs/lenis/lenis.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./libs/lenis/lenis.min.js" defer></script>
   <script src="./js/main.js" defer></script>
 </head>
 <body id="topo">
@@ -14,7 +16,7 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="./index.html" aria-label="Página inicial — Tipos de Interfaces de Usuário">
+      <a class="brand" href="./index.html" aria-label="Ir para a página inicial — Tipos de Interfaces de Usuário">
         <img src="./img/logo-ifrr.png" width="849" height="175" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
         <span class="brand-text">
           <strong>Tipos de Interfaces de Usuário</strong>
@@ -66,10 +68,10 @@
         </div>
 
         <figure class="hero-figure figura-conteudo">
-          <img src="./img/fotos-integrantes.webp" width="750" height="1333" alt="Foto dos integrantes do trabalho, Israel Moreno e Andreia de Souza">
+          <img src="./img/fotos-integrantes.webp" width="750" height="1333" alt="Israel, Kelly e Andreia lado a lado, integrantes responsáveis pelo trabalho">
           <figcaption>
-            <span><strong>Descrição:</strong> Israel, Kelly e Andreia, integrantes do trabalho.</span>
-            <span><strong>Fonte:</strong> Arquivo fornecido pelos integrantes, 2026.</span>
+            <span><strong>Descrição:</strong> Israel, Kelly e Andreia lado a lado, integrantes responsáveis pelo trabalho.</span>
+            <span><strong>Fonte:</strong> arquivo fornecido pelos integrantes, 2026.</span>
           </figcaption>
         </figure>
       </div>
@@ -86,9 +88,9 @@
       </div>
     </section>
 
-    <section class="section" id="interfaces" aria-labelledby="interfaces-titulo">
+    <section class="section secao-interfaces" id="interfaces" aria-labelledby="interfaces-titulo">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading texto-introdutorio">
           <p class="eyebrow">Sete abordagens</p>
           <h2 id="interfaces-titulo">Conheça os tipos de interface</h2>
           <p>Selecione um tema para consultar definição, funcionamento, exemplos, benefícios, limitações e cuidados de acessibilidade.</p>
@@ -97,7 +99,7 @@
         <div class="cards grade-interfaces">
           <a class="interface-card" href="./paginas/gui.html">
             <div class="card-visual">
-              <img src="./img/gui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/gui.svg" width="720" height="450" loading="lazy" alt="Tela de computador com menu lateral, janela, botões e cartões visuais">
             </div>
             <div class="card-body">
               <span class="tag">GUI</span>
@@ -109,7 +111,7 @@
 
           <a class="interface-card" href="./paginas/cli.html">
             <div class="card-visual">
-              <img src="./img/cli.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/cli.svg" width="720" height="450" loading="lazy" alt="Janela de terminal escura com linhas de comando e cursor, representando uma interface de linha de comando">
             </div>
             <div class="card-body">
               <span class="tag">CLI</span>
@@ -121,7 +123,7 @@
 
           <a class="interface-card" href="./paginas/menu.html">
             <div class="card-visual">
-              <img src="./img/menu.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/menu.svg" width="720" height="450" loading="lazy" alt="Painel com opções organizadas em lista e uma opção destacada, representando uma interface orientada por menu">
             </div>
             <div class="card-body">
               <span class="tag">Menu</span>
@@ -133,7 +135,7 @@
 
           <a class="interface-card" href="./paginas/touch-ui.html">
             <div class="card-visual">
-              <img src="./img/touch-ui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/touch-ui.svg" width="720" height="450" loading="lazy" alt="Mão tocando um botão circular na tela de um dispositivo móvel, representando uma interface de toque">
             </div>
             <div class="card-body">
               <span class="tag">Touch UI</span>
@@ -145,7 +147,7 @@
 
           <a class="interface-card" href="./paginas/vui.html">
             <div class="card-visual">
-              <img src="./img/vui.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/vui.svg" width="720" height="450" loading="lazy" alt="Microfone cercado por ondas sonoras azuis e verdes, representando uma interface de voz">
             </div>
             <div class="card-body">
               <span class="tag">VUI</span>
@@ -157,7 +159,7 @@
 
           <a class="interface-card" href="./paginas/formulario.html">
             <div class="card-visual">
-              <img src="./img/formulario.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/formulario.svg" width="720" height="450" loading="lazy" alt="Formulário com campos de texto, caixa de seleção, rótulos e botão de envio">
             </div>
             <div class="card-body">
               <span class="tag">Formulário</span>
@@ -169,7 +171,7 @@
 
           <a class="interface-card" href="./paginas/linguagem-natural.html">
             <div class="card-visual">
-              <img src="./img/linguagem-natural.svg" width="720" height="450" loading="lazy" alt="" aria-hidden="true">
+              <img src="./img/linguagem-natural.svg" width="720" height="450" loading="lazy" alt="Pessoa e computador trocando balões de conversa, representando interação por linguagem natural">
             </div>
             <div class="card-body">
               <span class="tag">Linguagem natural</span>
@@ -211,7 +213,7 @@
     <div class="container footer-grid">
       <div>
         <p><strong>Instituto Federal de Roraima — IFRR</strong></p>
-        <p>Multimídia e Interação Humano-Computador · MOD 4 — Noturno · 2026</p>
+        <p>Multimídia e Interação Humano-Computador · MOD 4 - Noturno · 2026</p>
       </div>
       <nav class="footer-links" aria-label="Navegação do rodapé">
         <a href="./paginas/referencias.html">Referências</a>

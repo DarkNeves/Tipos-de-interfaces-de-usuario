@@ -33,6 +33,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--altura-header);
+}
+
+html.lenis {
+  scroll-behavior: auto;
 }
 
 body {
@@ -58,7 +63,7 @@ body.menu-movel-aberto {
 }
 
 [id] {
-  scroll-margin-top: calc(var(--altura-header) + 1.5rem);
+  scroll-margin-top: var(--espaco-3);
 }
 
 img,
@@ -465,6 +470,18 @@ figcaption {
 .section-heading > p:last-child {
   font-size: 1.5rem;
   line-height: 1.6;
+}
+
+.secao-interfaces .texto-introdutorio {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 var(--espaco-5);
+}
+
+.secao-interfaces .texto-introdutorio > p:last-child {
+  width: 100%;
+  max-width: 90ch;
+  margin-right: 0;
 }
 
 .secao-introducao .conteudo-introducao {
@@ -991,6 +1008,8 @@ figcaption {
 }
 
 .powershell-demo figcaption {
+  display: grid;
+  gap: 0.35rem;
   margin: 0;
   padding: 0.55rem 0.75rem;
   border-top: 1px solid #30363d;
@@ -1040,6 +1059,14 @@ figcaption {
 .referencias-pagina .references-list {
   width: 100%;
   max-width: none;
+}
+
+.referencias-pagina .reference-item,
+.referencias-pagina .reference-item p,
+.referencias-pagina .reference-item a {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
 }
 
 .site-footer {
@@ -1114,7 +1141,6 @@ figcaption {
 
   .menu-pagina {
     position: static;
-    grid-row: 1;
     padding: var(--espaco-3) var(--espaco-4);
   }
 
@@ -1221,6 +1247,21 @@ figcaption {
   .grade-interfaces,
   .cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .secao-interfaces .texto-introdutorio,
+  .secao-interfaces .texto-introdutorio > p:last-child {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .referencias-pagina .references-list,
+  .referencias-pagina .reference-item,
+  .referencias-pagina .reference-item p {
+    font-size: 1.5rem;
+    line-height: 1.55;
   }
 }
 

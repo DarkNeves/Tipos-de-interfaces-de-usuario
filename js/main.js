@@ -11,6 +11,38 @@
   const botaoTopo = document.querySelector("[data-back-to-top]");
   const linkPular = document.querySelector(".pular-conteudo");
 
+  const iniciarScrollSuave = () => {
+    if (
+      reduzirMovimento.matches ||
+      typeof window.Lenis !== "function" ||
+      window.siteLenis
+    ) {
+      return;
+    }
+
+    window.siteLenis = new window.Lenis({
+      autoRaf: true,
+      smoothWheel: true,
+      lerp: 0.1,
+      wheelMultiplier: 0.9,
+      syncTouch: false,
+      anchors: true
+    });
+  };
+
+  const sincronizarPreferenciaDeMovimento = () => {
+    if (reduzirMovimento.matches) {
+      window.siteLenis?.destroy();
+      delete window.siteLenis;
+      return;
+    }
+
+    iniciarScrollSuave();
+  };
+
+  iniciarScrollSuave();
+  reduzirMovimento.addEventListener?.("change", sincronizarPreferenciaDeMovimento);
+
   const definirEspacoDoMenu = () => {
     if (!menu || !limiteMovel.matches || menu.hidden) {
       document.body.classList.remove("menu-movel-aberto");
@@ -77,13 +109,6 @@
       aberto ? fecharMenu() : abrirMenu();
     });
 
-    botaoMenu.addEventListener("keydown", (event) => {
-      if ((event.key === "Enter" || event.key === " ") && !event.repeat) {
-        event.preventDefault();
-        botaoMenu.click();
-      }
-    });
-
     menu.addEventListener("click", (event) => {
       if (limiteMovel.matches && event.target.closest("a")) {
         fecharMenu();
@@ -109,6 +134,11 @@
     };
 
     botaoTopo.addEventListener("click", () => {
+      if (window.siteLenis) {
+        window.siteLenis.scrollTo(0);
+        return;
+      }
+
       window.scrollTo({
         top: 0,
         behavior: reduzirMovimento.matches ? "auto" : "smooth"

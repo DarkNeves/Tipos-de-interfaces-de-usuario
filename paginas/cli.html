@@ -6,14 +6,16 @@
   <meta name="description" content="Definição, funcionamento, exemplos, vantagens, limitações e acessibilidade da Interface de Linha de Comando (CLI).">
   <title>CLI — Interface de Linha de Comando</title>
   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../libs/lenis/lenis.css">
   <link rel="stylesheet" href="../css/style.css">
+  <script src="../libs/lenis/lenis.min.js" defer></script>
   <script src="../js/main.js" defer></script>
 </head>
 <body id="topo">
   <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo principal</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="../index.html" aria-label="Página inicial — Tipos de Interfaces de Usuário">
+      <a class="brand" href="../index.html" aria-label="Ir para a página inicial — Tipos de Interfaces de Usuário">
         <img src="../img/logo-ifrr.png" width="849" height="175" alt="Logo do Instituto Federal de Educação, Ciência e Tecnologia de Roraima">
         <span class="brand-text"><strong>Tipos de Interfaces de Usuário</strong><span>Trabalho acadêmico</span></span>
       </a>
@@ -66,12 +68,12 @@
             <h2 id="exemplos-titulo">Exemplos de utilização</h2>
             <p>Prompt de Comando, PowerShell, Bash, Terminal Linux, Git e ferramentas de administração de servidores utilizam interfaces de linha de comando.</p>
             <p>O PowerShell é um exemplo de CLI. O usuário digita comandos e o sistema apresenta os resultados em formato textual.</p>
-            <figure class="powershell-demo" aria-label="Simulação do Windows PowerShell demonstrando, nesta ordem, os comandos git pull, git init, git add ponto, git commit com a mensagem Israel e git push.">
+            <figure class="powershell-demo">
               <div class="terminal-barra" aria-hidden="true">
                 <span class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></span>
                 <strong class="terminal-titulo">Windows PowerShell</strong>
               </div>
-              <div class="terminal-conteudo">
+              <div class="terminal-conteudo" role="img" aria-label="Simulação de uma janela do Windows PowerShell mostrando, nesta ordem, os comandos git pull, git init, git add ponto, git commit com a mensagem Israel e git push, acompanhados das respostas do terminal." data-lenis-prevent>
                 <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git pull</span></p>
                 <p class="output">Already up to date.</p>
                 <p class="terminal-gap" aria-hidden="true"></p>
@@ -86,7 +88,10 @@
                 <p>PS C:\Users\Aluno\Projeto&gt; <span class="command">git push</span></p>
                 <p class="output">Everything up-to-date.</p>
               </div>
-              <figcaption>Simulação de comandos Git executados no Windows PowerShell.</figcaption>
+              <figcaption>
+                <span><strong>Descrição:</strong> sequência de comandos Git e respostas exibida em uma simulação do Windows PowerShell.</span>
+                <span><strong>Fonte:</strong> simulação autoral desenvolvida para este projeto, 2026.</span>
+              </figcaption>
             </figure>
           </section>
           <section id="analise" aria-labelledby="analise-titulo">

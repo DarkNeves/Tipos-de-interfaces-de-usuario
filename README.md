@@ -13,9 +13,10 @@ Pesquisar diferentes tipos de interface e apresentar o conteúdo em um site aces
 - HTML5;
 - CSS3;
 - JavaScript puro;
-- SVGs autorais locais.
+- SVGs autorais locais;
+- Lenis 1.3.25, armazenado localmente em `libs/lenis`.
 
-Não há frameworks, bibliotecas externas, fontes remotas, APIs, banco de dados ou processo de build.
+Não há frameworks, fontes remotas, APIs, banco de dados ou processo de build. O Lenis é a única biblioteca de interface e não depende de CDN.
 
 ## Estrutura das pastas
 
@@ -37,6 +38,11 @@ tipos-de-interfaces/
 │   └── style.css
 ├── js/
 │   └── main.js
+├── libs/
+│   └── lenis/
+│       ├── lenis.min.js
+│       ├── lenis.css
+│       └── LICENSE
 └── img/
     ├── logo-ifrr.png
     ├── favicon.svg
